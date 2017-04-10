@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.appboy.com/campaigns/trigger/send
+    body:
+      encoding: UTF-8
+      string: '{"app_group_id":"<APPBOY_GROUP_ID>","campaign_id":<APPBOY_TEST_SEGMENT>,"trigger_properties":{"foo":"bar"},"recipients":{"external_id":<APPBOY_TEST_SEGMENT>}}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.<APPBOY_TEST_SEGMENT>0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=<APPBOY_TEST_SEGMENT>.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Server:
+      - nginx/<APPBOY_TEST_SEGMENT>.<APPBOY_TEST_SEGMENT>0.2
+      Strict-Transport-Security:
+      - max-age=3<APPBOY_TEST_SEGMENT>536000
+      X-Request-Id:
+      - 57fe97e<APPBOY_TEST_SEGMENT>-55e5-449b-87c0-df<APPBOY_TEST_SEGMENT>90<APPBOY_TEST_SEGMENT>e<APPBOY_TEST_SEGMENT>640b
+      X-Runtime:
+      - '0.006300'
+      Content-Length:
+      - '77'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Mon, <APPBOY_TEST_SEGMENT>0 Apr 20<APPBOY_TEST_SEGMENT>7 22:32:3<APPBOY_TEST_SEGMENT>
+        GMT
+      Via:
+      - "<APPBOY_TEST_SEGMENT>.<APPBOY_TEST_SEGMENT> varnish"
+      Connection:
+      - keep-alive
+      X-Served-By:
+      - cache-sea<APPBOY_TEST_SEGMENT>04<APPBOY_TEST_SEGMENT>-SEA
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S<APPBOY_TEST_SEGMENT>49<APPBOY_TEST_SEGMENT>863552.860834,VS0,VE76
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"message":"success"}'
+    http_version: 
+  recorded_at: Mon, 10 Apr 2017 22:32:31 GMT
+recorded_with: VCR 2.9.3
