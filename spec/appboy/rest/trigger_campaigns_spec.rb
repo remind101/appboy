@@ -7,18 +7,14 @@ describe Appboy::REST::TriggerCampaigns do
   let(:recipients) { { external_id: 1 } }
 
   let(:payload) {{
-    campaign_id: :campaign_id,
-    trigger_properties: :trigger_properties,
-    recipients: :recipients
+    campaign_id: campaign_id,
+    trigger_properties: trigger_properties,
+    recipients: recipients
   }}
 
   let(:app_group_id) { :app_group_id }
 
-  subject { described_class.new(app_group_id,
-    campaign_id,
-    trigger_properties,
-    recipients
-  ) }
+  subject { described_class.new(app_group_id, payload) }
 
   before { subject.http = http }
 
